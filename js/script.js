@@ -187,3 +187,32 @@ checkoutButton.addEventListener('click', function() {
             });
         });
 });
+
+//Contact Form
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+
+    // Envia o email usando o serviço do EmailJS
+    emailjs.sendForm('service_8dtlbdl', 'template_0ycb4bq', this)
+        .then(function(response) {
+            console.log('Success:', response);
+            // Usa SweetAlert para mostrar uma mensagem de sucesso
+            Swal.fire({
+                title: 'Success!',
+                text: 'Your message has been sent successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+            // Limpa o formulário após o envio
+            document.getElementById('contact-form').reset();
+        }, function(error) {
+            console.log('Error:', error);
+            // Usa SweetAlert para mostrar uma mensagem de erro
+            Swal.fire({
+                title: 'Error!',
+                text: 'Failed to send your message. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        });
+});
