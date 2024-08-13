@@ -193,7 +193,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault(); // Evita o envio padrão do formulário
 
     // Envia o email usando o serviço do EmailJS
-    emailjs.sendForm('service_8dtlbdl', 'template_0ycb4bq', this)
+    emailjs.sendForm('service_8dtlbdl', 'template_glpaaor', this)
         .then(function(response) {
             console.log('Success:', response);
             // Usa SweetAlert para mostrar uma mensagem de sucesso
