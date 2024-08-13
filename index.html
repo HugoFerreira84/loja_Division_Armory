@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Armory</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Division Armory</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="login-area">
+                    <form id="login-form" class="login-form">
+                        <input type="text" id="username" name="username" placeholder="Your Name" required>
+                        <input type="email" id="useremail" name="useremail" placeholder="Your Email" required>
+                        <button type="submit" class="login-button">Login</button>
+                    </form>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <img src="/img/shopping-cart.png" alt="Cart">
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="overlay">
+            <div class="hero-content">
+                <h1>The Best Weapons in The Division 2</h1>
+                <p>Find the weapons you need to dominate the battlefield.</p>
+                <a href="#products" class="button">Explore Weapons</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <h2>Available Weapons</h2>
+            <div class="product-list" id="product-list">
+                <div class="product-card">
+                    <img src="/img/berrante.webp" alt="Weapon 1">
+                    <h3>Weapon Name 1</h3>
+                    <p>Brief description of the weapon and its features.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Weapon Name 1" data-price="150" data-img="weapon1.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/portador.webp" alt="Weapon 2">
+                    <h3>Weapon Name 2</h3>
+                    <p>Brief description of the weapon and its features.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Weapon Name 2" data-price="200" data-img="weapon2.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/voraz.jpg" alt="Weapon 3">
+                    <h3>Weapon Name 3</h3>
+                    <p>Brief description of the weapon and its features.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Weapon Name 3" data-price="250" data-img="weapon3.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/regulus.jpg" alt="Weapon 1">
+                    <h3>Weapon Name 1</h3>
+                    <p>Brief description of the weapon and its features.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Weapon Name 1" data-price="150" data-img="weapon1.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/scorpion.jpg" alt="Weapon 2">
+                    <h3>Weapon Name 2</h3>
+                    <p>Brief description of the weapon and its features.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Weapon Name 2" data-price="200" data-img="weapon2.jpg">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="/img/tagarela.jpg" alt="Weapon 3">
+                    <h3>Weapon Name 3</h3>
+                    <p>Brief description of the weapon and its features.</p>
+                    <p class="price">$100.00</p>
+                    <button class="add-to-cart" data-name="Weapon Name 3" data-price="250" data-img="weapon3.jpg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We specialize in providing the best weapons for The Division 2, ensuring you have everything you need to be the best agent on the battlefield.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="button">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="container">
+            <p>&copy; 2024 Division Armory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-summary">
+                <p id="cart-total">Total: $0.00</p>
+                <div class="cart-actions">
+                    <button id="continue-shopping" class="button">Continue Shopping</button>
+                    <button id="checkout-button" class="button">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
